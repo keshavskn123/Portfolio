@@ -4,6 +4,7 @@ import emailjs from "emailjs-com";
 import { MdEmail } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import { SiGeeksforgeeks } from "react-icons/si";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -30,11 +31,33 @@ export default function Contact() {
   }
 
   const icons = [
-    { icon: <MdEmail size={30} />, link: "mailto:keshavskn123@gmail.com" },
-    { icon: <FaLinkedin size={30} />, link: "https://www.linkedin.com/in/keshav-1375a4254" },
-    { icon: <FaGithub size={30} />, link: "https://github.com/keshavskn123" },
-    { icon: <SiLeetcode size={30} />, link: "https://leetcode.com/keshavskn123/" }
+    {
+      icon: <MdEmail size={30} />,
+      link: "https://mail.google.com/mail/?view=cm&to=keshavskn123@gmail.com",
+      label: "Email"
+    },
+    {
+      icon: <FaLinkedin size={30} />,
+      link: "https://www.linkedin.com/in/keshav-1375a4254",
+      label: "LinkedIn"
+    },
+    {
+      icon: <FaGithub size={30} />,
+      link: "https://github.com/keshavskn123",
+      label: "GitHub"
+    },
+    {
+      icon: <SiLeetcode size={30} />,
+      link: "https://leetcode.com/u/KESHAV_2004/",
+      label: "LeetCode"
+    },
+    {
+      icon: <SiGeeksforgeeks size={30} />,
+      link: "https://www.geeksforgeeks.org/user/keshavskn12345/",
+      label: "GeeksforGeeks"
+    }
   ];
+
 
   return (
     <section id="contact" className="py-28 px-6 text-center relative">
@@ -44,7 +67,7 @@ export default function Contact() {
         Contact Me
       </motion.h2>
 
-      <p className="text-gray-400 mb-10">Let’s talk — I usually reply within a day.</p>
+      <p className="text-gray-400 mb-10">Let’s talk - I usually reply within a day.</p>
 
       {/* Contact Form */}
       <form onSubmit={sendEmail} className="max-w-lg mx-auto flex flex-col gap-4">
