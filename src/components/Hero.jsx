@@ -36,7 +36,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -40 }}
           transition={{ duration: 0.7, ease: "easeInOut" }}
-          className="text-6xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text drop-shadow-xl leading-tight"
+          className="text-4xl sm:text-5xl md:text-6xl
+ font-extrabold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text drop-shadow-xl leading-tight"
         >
           {titles[index]}
         </motion.h1>
@@ -69,11 +70,12 @@ export default function Hero() {
 
         <a
           href="/resume.pdf"
-          download
+          download="Keshav-Resume.pdf"
           className="px-8 py-3 border border-purple-500 text-purple-300 rounded-xl font-semibold text-lg hover:bg-purple-600 hover:text-white hover:shadow-[0_0_20px_rgba(148,103,255,0.7)] hover:-translate-y-1 transition-all duration-300"
         >
           Download Resume
         </a>
+
       </motion.div>
 
     </section>
