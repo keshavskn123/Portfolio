@@ -3,15 +3,19 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="relative overflow-hidden">
       <Navbar /> 
       <Hero />
+      <About /> 
       <Skills />
       <Projects />
       <Contact />   
+      <Footer />
     </div>
   );
 }

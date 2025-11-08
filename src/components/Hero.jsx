@@ -50,7 +50,7 @@ export default function Hero() {
         transition={{ duration: 1.1 }}
         className="mt-6 text-xl max-w-3xl text-gray-300 leading-relaxed font-light"
       >
-        Crafting clean, modern and user-focused web experiences while improving my React and Frontend skills.
+        Frontend Developer & Problem Solver with a strong foundation in Data Structures and Algorithms.
       </motion.p>
 
       {/* Buttons */}
