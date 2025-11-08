@@ -1,46 +1,45 @@
 import { motion } from "framer-motion";
+import {
+  FaHtml5, FaCss3Alt, FaReact, FaGitAlt,
+  FaNodeJs, FaPython
+} from "react-icons/fa";
+import {
+  SiJavascript, SiTailwindcss, SiExpress, SiMongodb,
+  SiCplusplus, SiMysql
+} from "react-icons/si";
 
 export default function Skills() {
   const skills = [
-    "C++", "Data Structures", "Algorithms",
-    "HTML", "CSS", "JavaScript", "React",
-    "Git", "Tailwind CSS", 
-    "Node.js", "Express.js", "MongoDB",
-    "Computer Networks", 
-    "OOPs", "DBMS", "Operating Systems",
-    "Problem Solving", "Teamwork", "Communication Skills"
+    { name: "C++", icon: <SiCplusplus size={38} /> },
+    { name: "HTML", icon: <FaHtml5 size={38} /> },
+    { name: "CSS", icon: <FaCss3Alt size={38} /> },
+    { name: "JavaScript", icon: <SiJavascript size={38} /> },
+    { name: "React", icon: <FaReact size={38} /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss size={38} /> },
+    { name: "Git", icon: <FaGitAlt size={38} /> },
+    { name: "Node.js", icon: <FaNodeJs size={38} /> },
+    { name: "Express.js", icon: <SiExpress size={38} /> },
+    { name: "MongoDB", icon: <SiMongodb size={38} /> },
+    { name: "DBMS", icon: <SiMysql size={38} /> },
+    { name: "Operating Systems", icon: <FaPython size={38} /> },
   ];
 
   return (
     <section id="skills" className="py-28 px-6 text-center relative">
-      {/* Glowing background accent */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-purple-700 rounded-full blur-[150px] opacity-20"></div>
+      <h2 className="text-4xl font-bold text-white drop-shadow-lg mb-12">Skills</h2>
 
-      <motion.h2
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-4xl font-bold text-white drop-shadow-lg"
-      >
-        Skills
-      </motion.h2>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 1 }}
-        className="mt-12 flex flex-wrap justify-center gap-5 max-w-3xl mx-auto"
-      >
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            whileHover={{ scale: 1.12, boxShadow: "0 0 20px rgba(165,105,255,0.65)" }}
-            className="px-5 py-2 rounded-full border border-gray-500 hover:border-purple-400 text-gray-200 hover:text-purple-300 transition-all duration-300 bg-white/5 backdrop-blur-sm"
+            whileHover={{ scale: 1.12 }}
+            className="flex flex-col items-center gap-2 bg-white/5 border border-purple-400/40 rounded-xl p-5 backdrop-blur-sm hover:shadow-[0_0_25px_rgba(165,105,255,0.45)] transition-all"
           >
-            {skill}
+            <span className="text-purple-300">{skill.icon}</span>
+            <p className="text-gray-300 text-sm">{skill.name}</p>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }

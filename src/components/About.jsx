@@ -15,14 +15,19 @@ export default function About() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 text-center md:text-left">
         
         {/* Profile Image */}
-        <motion.img
-          src="/me.jpeg"
-          alt="Keshav"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="w-48 h-48 rounded-2xl object-cover border border-purple-400 shadow-[0_0_30px_rgba(160,100,255,0.4)]"
+        <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border border-purple-400 shadow-[0_0_35px_rgba(165,105,255,0.45)] mx-auto md:mx-0"
+        >
+        <img
+            src="/me.jpeg"
+            alt="Keshav"
+            className="w-full h-full object-cover object-top"
         />
+        </motion.div>
+
 
         {/* Text Content */}
         <div>
@@ -44,7 +49,7 @@ export default function About() {
             I'm <span className="text-purple-300 font-semibold">Keshav</span>, a passionate 
             <span className="text-purple-300 font-semibold"> Frontend Developer</span> and 
             <span className="text-purple-300 font-semibold"> Problem Solver</span> with a strong foundation in 
-            Data Structures & Algorithms using C++. As a fresher, I enjoy learning modern tools and building user-centered, 
+            <span className="text-purple-300 font-semibold"> Data Structures & Algorithms using C++.</span> As a fresher, I enjoy learning modern tools and building user-centered, 
             clean and efficient web experiences. I believe in continuous improvement, consistency and real-world problem solving.
           </motion.p>
 
