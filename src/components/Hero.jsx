@@ -48,10 +48,13 @@ export default function Hero() {
         initial={{ opacity: 0, y: 35 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.1 }}
-        className="mt-6 text-xl max-w-3xl text-gray-300 leading-relaxed font-light"
+        className="mt-6 text-lg sm:text-xl max-w-3xl text-gray-300 leading-relaxed px-4"
       >
-        Frontend Developer & Problem Solver with a strong foundation in Data Structures and Algorithms.
+        Frontend Developer & Problem Solver with a strong foundation in Data Structures 
+        and Algorithms. I focus on building clean, intuitive and user-focused interfaces 
+        while continuously improving my problem-solving and development skills.
       </motion.p>
+
 
       {/* Buttons */}
       <motion.div
