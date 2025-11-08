@@ -8,6 +8,7 @@ export default function Skills() {
     "Node.js", "Express.js", "MongoDB",
     "Computer Networks", 
     "OOPs", "DBMS", "Operating Systems",
+    "Problem Solving", "Teamwork", "Communication Skills"
   ];
 
   return (
