@@ -16,7 +16,7 @@ export default function About() {
         
         {/* Profile Image */}
         <motion.img
-          src="/me.jpg"
+          src="/me.jpeg"
           alt="Keshav"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
